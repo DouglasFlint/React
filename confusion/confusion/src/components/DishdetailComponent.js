@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class DishDetail extends Component{
     constructor(props){
@@ -44,9 +44,9 @@ class DishDetail extends Component{
                     &nbsp;
                     {new Intl.DateTimeFormat('en-Us',{
                         year: 'numeric',
-                        month: 'long',
+                        month: 'short',
                         day: '2-digit'
-                    }).format(new Date(comment.date))}
+                    }).format(new Date(Date.parse(comment.date)))}
                     </p>
                 </li>
             )
